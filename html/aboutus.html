@@ -17,6 +17,20 @@
     <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../bootstrap/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../js/aboutus.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        @media screen and (min-width: 768px) {
+            .bg {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .bg {
+                min-width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -64,7 +78,7 @@
     </nav>
 
     <section class="one container-fluid">
-        <img src="../img/starsky.png" class="bg" style="width:100%" />
+        <img src="../img/starsky.png" class="bg" />
         <img src="../img/abouttitle.png" class="txt img-responsive center-block" />
     </section>
 
