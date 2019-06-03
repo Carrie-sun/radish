@@ -1,4 +1,18 @@
 window.onload = function() {
+    $.ajax({
+        url: 'http://api.map.baidu.com/api?address=成都v=3.0&ak=l2ZQWxCznAjyCSWBQpsK864K3hYHhk2p',
+        type: 'GET',
+        async: false, //设置同步。ajax默认异步
+        dataType: 'jsonp',
+        jsonp: 'callback', //传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+        jsonpCallback: "callback", //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+        timeout: 5000,
+        contentType: 'application/json; charset=utf-8',
+        success: function(result) {
+            console.log(result);
+        }
+    })
+
     //创建和初始化地图函数：
     function initMap() {
         createMap(); //创建地图
